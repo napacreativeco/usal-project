@@ -1,0 +1,618 @@
+/*
+* Theme name: USAL
+*/
+
+/*
+*
+* Variables
+*
+*/
+:root {
+    --black: #040707;
+    --green: #567b54;
+    --blue: #2d5ca2;
+    --pink: #bb8668;
+    --white: #ebe9e3;
+}
+
+@font-face {
+    font-family: 'PP Supply Mono';
+    src: url('./assets/fonts/PPSupplyMono-Regular.woff2') format('woff2'),
+        url('./assets/fonts/PPSupplyMono-Regular.woff') format('woff'),
+        url('./assets/fonts/PPSupplyMono-Regular.svg#PPSupplyMono-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*
+*
+* Resets
+*
+*/
+* {
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+}
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 16px;
+    color: var(--black);
+}
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0;
+    font-family: neue-haas-grotesk-display,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: -2.5px;
+}
+p.typewriter {
+    font-family: 'PP Supply Mono';
+    font-weight: normal;
+    font-style: normal;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    margin-right: 40px;
+}
+img.bullet {
+    width: 10px;
+    margin-right: 10px;
+}
+hr {
+    height: 2px;
+    background: var(--black);
+    width: 100%;
+    border: 0px;
+}
+/*
+*
+* Main Container
+*
+*/
+main#main {
+    padding: 10px 20px;
+    background: var(--green);
+    width: 100%;
+}
+
+/*
+*
+* Navigation
+*
+*/
+header.nav.desktop {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+header.nav.desktop .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    left: 10px;
+}
+header.nav.desktop .center {
+    text-align: center;
+}
+header.nav.desktop .right {
+    text-align: right;
+}
+
+/*
+*
+* Slide 01
+*
+*/
+section.one {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+section.one h1 {
+    font-size: 45vh;
+    text-transform: uppercase;
+    text-align: center;
+}
+section.one .are-here {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+/*
+*
+* Slide 02
+*
+*/
+section.two {
+    position: relative;
+    min-height: 100vh;
+}
+section.two nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+section.two nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-width: 10vw;
+}
+section.two .logo {
+    position: absolute;
+    width: 100%;
+}
+section.two .logo img {
+    width: 100%;
+    transition: width 0.6s;
+}
+section.two .desc {
+    font-size: 68px;
+    color: var(--black);
+    padding-top: 100vh;
+    padding-bottom: 60px;
+}
+section.two .desc p {
+    text-align: justify;
+    line-height: 1;
+}
+section.two .desc img {
+    display: inline;
+    max-width: 120px;
+}
+
+/*
+*
+* Slide 03: Sign up
+*
+*/
+section.sign-up {
+    padding: 100px 0 100px 0;
+}
+section.sign-up p {
+    font-size: 12vw;
+    text-transform: uppercase;
+    line-height: 0.8;
+}
+section.sign-up .email {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    border-bottom: 3px solid var(--black);
+    padding: 120px 0 10px 0;
+}
+section.sign-up input[type="email"] {
+    background: transparent;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--black);
+    border: 0;
+}
+section.sign-up input[type="email"]::placeholder {
+    color: var(--black);
+}
+section.sign-up input[type="email"]:focus {
+    border: 0;
+}
+section.sign-up input[type="submit"] {
+    background: transparent;
+    border: 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--black);
+    text-align: right;
+}
+
+/*
+*
+* Slide 03: Gallery
+*
+*/
+section.gallery__alt {
+    position: relative;
+    width: 100%;
+    background: var(--green);
+
+}
+section.gallery__alt .photos {
+    /* position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1; */
+    width: 100%;
+}
+section.gallery__alt .photos img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Image 1 */
+section.gallery__alt .photos .image-one {
+    width: 70vw;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Image 2 */
+section.gallery__alt .photos .image-two {
+    width: 25vw;
+    height: 250px;
+    position: absolute;
+    top: 700px;
+    left: 14vw;
+    overflow: hidden;
+}
+
+/* Image 3 */
+section.gallery__alt .photos .image-three {
+    width: 30vw;
+    height: 300px;
+    position: absolute;
+    top: 1000px;
+    left: 50vw;
+    overflow: hidden;
+}
+
+/* Image 4 */
+section.gallery__alt .photos .image-four {
+    width: 15vw;
+    height: auto;
+    position: absolute;
+    top: 1250px;
+    left: 25vw;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* Image 5 */
+section.gallery__alt .photos .image-five {
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    top: 1450px;
+    left: 2vw;
+    overflow: hidden;
+}
+
+/* Image 6 */
+section.gallery__alt .photos .image-six {
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 1400px;
+    right: 1vw;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* Image 7 */
+section.gallery__alt .photos .image-seven {
+    width: 60vw;
+    height: 60vw;
+    position: absolute;
+    top: 1700px;
+    right: 1vw;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Image 7 */
+section.gallery__alt .photos .image-eight {
+    width: 22vw;
+    height: auto;
+    position: absolute;
+    top: 2400px;
+    left: 0;
+    overflow: hidden;
+}
+
+/*
+*
+* Slide 03: Gallery Overlay
+*
+*/
+section.gallery__alt .overlay {
+    position: relative;
+    z-index: 3;
+}
+section.gallery img {
+    max-width: 200px;
+}
+section.gallery img.hovery:hover {
+    animation: rotater 2s infinite;
+}
+@keyframes rotater {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+section.gallery .line-item {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section.gallery .line-item p {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+
+/*
+*
+* [A] BALANCE
+*
+*/
+svg g.hover__rotate:hover {
+    cursor: pointer;
+    transition: all 2s;
+    animation: rotater 2s infinite;
+    animation-timing-function: linear;
+}
+svg g.hover__rotate {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transform: translate(100, 100);
+    cursor: pointer;
+    pointer-events: bounding-box;
+}
+@keyframes rotater {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+
+}
+
+/*
+*
+* [B] FOUNDATION
+* 
+*/
+@keyframes slinky {
+    0% { stroke-width: 3.8px; }
+    50% { stroke-width: 8.5px; }
+    100% { stroke-width: 3.8px; }
+}
+svg g.hover__slinky:hover ellipse {
+    cursor: pointer;
+    transition: all 2s;
+    animation: slinky 2s infinite;
+    animation-timing-function: linear;
+}
+svg g.hover__slinky {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transform: translate(100, 100);
+    cursor: pointer;
+    pointer-events: bounding-box;
+}
+/* [C] PATHFIND */
+@keyframes blinker {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+svg g.hover__flip:hover path {
+    cursor: pointer;
+    transition: all 2s;
+    animation: blinker 0.3s infinite;
+    animation-timing-function: linear;
+}
+svg g.hover__flip {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transform: translate(100, 100);
+    cursor: pointer;
+    pointer-events: bounding-box;
+}
+
+/*
+*
+* [E] NORTHSTAR
+*
+*/
+@keyframes twilightOne {
+    0% { opacity: 1; }
+    20% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes twilightTwo {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes twilightThree {
+    0% { opacity: 1; }
+    80% { opacity: 0; }
+    100% { opacity: 1; }
+}
+svg g.hover__stars  {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transform: translate(100, 100);
+    cursor: pointer;
+    pointer-events: bounding-box;
+}
+/* One */
+svg g.hover__stars:hover path.one {
+    cursor: pointer;
+    transition: all 2s;
+    animation: twilightOne 0.7s infinite;
+    animation-timing-function: linear;
+}
+/* Two */
+svg g.hover__stars:hover path.two {
+    cursor: pointer;
+    transition: all 2s;
+    animation: twilightTwo 0.7s infinite;
+    animation-timing-function: linear;
+}
+/* Three */
+svg g.hover__stars:hover path.three {
+    cursor: pointer;
+    transition: all 2s;
+    animation: twilightThree 0.7s infinite;
+    animation-timing-function: linear;
+}
+/* Lines */
+svg g.hover__stars:hover line.lines {
+    opacity: 0;
+}
+
+/*
+*
+* [F] MOTHER
+*
+*/
+svg g.hover__globe  {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transform: translate(100, 100);
+    cursor: pointer;
+    pointer-events: bounding-box;
+}
+svg g.hover__globe:hover ellipse,
+svg g.hover__globe:hover line {
+    cursor: pointer;
+    transition: all 2s;
+    animation: slinky 2s infinite;
+    animation-timing-function: linear;
+}
+
+/*
+*
+* [G] GROUNDED
+*
+*/
+@keyframes filler {
+    0% { fill: none; }
+    50% { fill: var(--black); }
+    100% { fill: var(--green); }
+}
+svg g.hover__grounded  {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transform: translate(100, 100);
+    cursor: pointer;
+    pointer-events: bounding-box;
+    transition: all 1s;
+}
+/* One */
+svg g.hover__grounded:hover path.one {
+    cursor: pointer;
+    transition: all 1s;
+    animation: filler 500ms infinite;
+}
+/* Two */
+svg g.hover__grounded:hover path.two {
+    cursor: pointer;
+    transition: all 2s;
+    animation: filler 500ms infinite;
+    animation-delay: 600ms;
+}
+/* Three */
+svg g.hover__grounded:hover path.three {
+    cursor: pointer;
+    animation: filler 500ms infinite;
+    animation-delay: 1200ms;
+}
+/* Four */
+svg g.hover__grounded:hover path.four {
+    cursor: pointer;
+    transition: all 1s;
+    animation: filler 500ms infinite;
+    animation-delay: 1800ms;
+}
+/* Five */
+svg g.hover__grounded:hover path.five {
+    cursor: pointer;
+    transition: all 1s;
+    animation: filler 500ms infinite;
+    animation-delay: 2400ms;
+}
+/* Five */
+svg g.hover__grounded:hover path.six {
+    cursor: pointer;
+    transition: all 1s;
+    animation: filler 500ms infinite;
+    animation-delay: 3000ms;
+}
+
+/*
+*
+* [H] GROWTH
+*
+*/
+@keyframes tubeTop {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(30px); }
+    100% { transform: translateY(0); }
+}
+@keyframes tubeMiddle {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(0px); }
+    100% { transform: translateY(0); }
+}
+@keyframes tubeBottom {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+svg g.hover__tube  {
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transform: translate(100, 100);
+    cursor: pointer;
+    pointer-events: bounding-box;
+    transition: all 1s;
+}
+/* Top */
+svg g.hover__tube:hover ellipse.top {
+    cursor: pointer;
+    transition: all 2s;
+    animation: tubeTop 1s infinite;
+}
+/* Middle */
+svg g.hover__tube:hover ellipse.middle {
+    cursor: pointer;
+    transition: all 2s;
+    animation: tubeMiddle 1s infinite;
+}
+/* Bottom */
+svg g.hover__tube:hover ellipse.bottom {
+    cursor: pointer;
+    transition: all 2s;
+    animation: tubeBottom 1s infinite;
+}
+
+/*
+*
+* FOOTER
+*
+*/
+footer p {
+    font-size: 2rem;
+}
