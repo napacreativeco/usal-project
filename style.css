@@ -41,6 +41,7 @@ body {
     overflow-x: hidden;
     font-size: 16px;
     color: var(--black);
+    background: var(--green);
 }
 h1, h2, h3, h4, h5, p {
     margin: 0;
@@ -80,7 +81,6 @@ hr {
 */
 main#main {
     padding: 10px 20px;
-    background: var(--green);
     width: 100%;
 }
 
@@ -93,6 +93,12 @@ header.nav.desktop {
     width: 100%;
     max-width: 100%;
     position: relative;
+    text-transform: uppercase;
+}
+header.nav.desktop p {
+    letter-spacing: 1.5px;
+    font-size: 0.4vw;
+    white-space: nowrap;
 }
 header.nav.desktop .row {
     display: grid;
@@ -103,6 +109,7 @@ header.nav.desktop .row {
     top: 0px;
     right: 10px;
     left: 10px;
+    width: calc(100% - 20px);
 }
 header.nav.desktop .center {
     text-align: center;
@@ -124,7 +131,7 @@ section.one {
     position: relative;
 }
 section.one h1 {
-    font-size: 45vh;
+    font-size: 16vw;
     text-transform: uppercase;
     text-align: center;
 }
@@ -143,6 +150,7 @@ section.one .are-here {
 section.two {
     position: relative;
     min-height: 100vh;
+    padding-top: 80px;
 }
 section.two nav {
     display: flex;
@@ -161,24 +169,26 @@ section.two nav ul {
 section.two .logo {
     position: absolute;
     width: 100%;
+    z-index: 999;
 }
 section.two .logo img {
     width: 100%;
     transition: width 0.6s;
 }
 section.two .desc {
-    font-size: 68px;
+    font-size: 4.8vw;
     color: var(--black);
     padding-top: 100vh;
     padding-bottom: 60px;
 }
 section.two .desc p {
     text-align: justify;
+    text-align-last: center;
     line-height: 1;
 }
 section.two .desc img {
     display: inline;
-    max-width: 120px;
+    max-width: 10vw;
 }
 
 /*
@@ -188,6 +198,7 @@ section.two .desc img {
 */
 section.sign-up {
     padding: 100px 0 100px 0;
+    width: 100%;
 }
 section.sign-up p {
     font-size: 12vw;
@@ -196,14 +207,15 @@ section.sign-up p {
 }
 section.sign-up .email {
     width: 100%;
+    max-width: 100%;
     display: grid;
-    grid-template-columns: 75% 1fr;
+    grid-template-columns: 2fr 1fr;
     border-bottom: 3px solid var(--black);
     padding: 120px 0 10px 0;
 }
 section.sign-up input[type="email"] {
     background: transparent;
-    font-size: 3rem;
+    font-size: 5vw;
     text-transform: uppercase;
     color: var(--black);
     border: 0;
@@ -217,7 +229,7 @@ section.sign-up input[type="email"]:focus {
 section.sign-up input[type="submit"] {
     background: transparent;
     border: 0;
-    font-size: 3rem;
+    font-size: 5vw;
     text-transform: uppercase;
     color: var(--black);
     text-align: right;
@@ -231,7 +243,6 @@ section.sign-up input[type="submit"] {
 section.gallery__alt {
     position: relative;
     width: 100%;
-    background: var(--green);
 
 }
 section.gallery__alt .photos {
@@ -258,10 +269,10 @@ section.gallery__alt .photos .image-one {
 
 /* Image 2 */
 section.gallery__alt .photos .image-two {
-    width: 25vw;
-    height: 250px;
+    width: 30vw;
+    height: 20vw;
     position: absolute;
-    top: 700px;
+    top: 44vw;
     left: 14vw;
     overflow: hidden;
 }
@@ -269,9 +280,9 @@ section.gallery__alt .photos .image-two {
 /* Image 3 */
 section.gallery__alt .photos .image-three {
     width: 30vw;
-    height: 300px;
+    height: 20vw;
     position: absolute;
-    top: 1000px;
+    top: 64vw;
     left: 50vw;
     overflow: hidden;
 }
@@ -281,7 +292,7 @@ section.gallery__alt .photos .image-four {
     width: 15vw;
     height: auto;
     position: absolute;
-    top: 1250px;
+    top: 80vw;
     left: 25vw;
     overflow: hidden;
     z-index: 2;
@@ -292,7 +303,7 @@ section.gallery__alt .photos .image-five {
     width: 30vw;
     height: 30vw;
     position: absolute;
-    top: 1450px;
+    top: 95vw;
     left: 2vw;
     overflow: hidden;
 }
@@ -302,8 +313,8 @@ section.gallery__alt .photos .image-six {
     width: 30vw;
     height: 20vw;
     position: absolute;
-    top: 1400px;
-    right: 1vw;
+    top: 95vw;
+    right: 6vw;
     overflow: hidden;
     z-index: 2;
 }
@@ -313,18 +324,18 @@ section.gallery__alt .photos .image-seven {
     width: 60vw;
     height: 60vw;
     position: absolute;
-    top: 1700px;
+    top: 110vw;
     right: 1vw;
     overflow: hidden;
     z-index: 1;
 }
 
-/* Image 7 */
+/* Image 8 */
 section.gallery__alt .photos .image-eight {
     width: 22vw;
     height: auto;
     position: absolute;
-    top: 2400px;
+    top: 145vw;
     left: 0;
     overflow: hidden;
 }
@@ -615,4 +626,43 @@ svg g.hover__tube:hover ellipse.bottom {
 */
 footer p {
     font-size: 2rem;
+}
+
+/*
+* ==============================
+* MEDIA QUERIES
+* ==============================
+*/
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 991px) {
+    
+}
+
+@media screen and (max-width: 767px) {
+    
+}
+
+/* MEDIUM */
+@media screen and (max-width: 600px) {
+    footer {
+        padding-top: 60px;
+    }
+    section.one {
+        padding: 40px 0;
+    }
+    section.two .desc {
+        font-size: 6vw;
+    }
+    section.two .desc img {
+        display: inline;
+        max-width: 10vw;
+    }
+}
+
+/* SMALL */
+@media screen and (max-width: 480px) {
+    
 }
