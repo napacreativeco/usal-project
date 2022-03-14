@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.11 80.47"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><ellipse class="cls-1" cx="77.55" cy="59.35" rx="75.55" ry="19.12"/><ellipse class="cls-1" cx="77.55" cy="40.23" rx="75.55" ry="19.12"/><ellipse class="cls-1" cx="77.55" cy="21.12" rx="75.55" ry="19.12"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.11 80.47"><defs>
+    <style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <ellipse class="cls-1 bottom" cx="77.55" cy="59.35" rx="75.55" ry="19.12"/>
+            <ellipse class="cls-1 middle" cx="77.55" cy="40.23" rx="75.55" ry="19.12"/>
+            <ellipse class="cls-1 top" cx="77.55" cy="21.12" rx="75.55" ry="19.12"/>
+</g></g></svg>

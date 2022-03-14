@@ -8,7 +8,7 @@
 *
 */
 :root {
-    --black: #040707;
+    --black: #0f0f0f;
     --green: #567b54;
     --blue: #2d5ca2;
     --pink: #bb8668;
@@ -97,7 +97,7 @@ header.nav.desktop {
 }
 header.nav.desktop p {
     letter-spacing: 1.5px;
-    font-size: 0.4vw;
+    font-size: 1.1vw;
     white-space: nowrap;
 }
 header.nav.desktop .row {
@@ -118,12 +118,31 @@ header.nav.desktop .right {
     text-align: right;
 }
 
+.logo > img {
+    min-width: 180px;
+    width: 90vw;
+    max-width: 90vw;
+    position: fixed;
+    top: 10px;
+    left: 5vw;
+    right: 5vw;
+}
+
 /*
 *
 * Slide 01
 *
 */
 section.one {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999999;
+    background: var(--green);
+}
+section.one .row {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -140,6 +159,7 @@ section.one .are-here {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
+    padding: 0 10vw 0 10vw;
 }
 
 /*
@@ -176,19 +196,38 @@ section.two .logo img {
     transition: width 0.6s;
 }
 section.two .desc {
-    font-size: 4.8vw;
+    font-size: 6vw;
     color: var(--black);
-    padding-top: 100vh;
+    padding-top: 60px;
     padding-bottom: 60px;
 }
 section.two .desc p {
     text-align: justify;
     text-align-last: center;
-    line-height: 1;
+    line-height: 1.1;
+    padding: 0;
+    margin: 0;
 }
+section.two .desc svg,
 section.two .desc img {
     display: inline;
-    max-width: 10vw;
+    max-width: 9vw;
+    margin-bottom: -10px;
+}
+section.two .desc p.location {
+    text-align: center;
+    padding-top: 60px;
+    width: 95%;
+    font-size: 4.9rem;
+}
+.vimeo {
+    opacity: 0;
+    transition: all 500ms;
+    width: 100%;
+    display: block;
+}
+.vimeo iframe {
+    margin: 0 auto 0 auto;
 }
 
 /*
@@ -197,7 +236,7 @@ section.two .desc img {
 *
 */
 section.sign-up {
-    padding: 100px 0 100px 0;
+    padding: 30px 80px 30px 80px;
     width: 100%;
 }
 section.sign-up p {
@@ -348,6 +387,7 @@ section.gallery__alt .photos .image-eight {
 section.gallery__alt .overlay {
     position: relative;
     z-index: 3;
+    padding-top: -100px;
 }
 section.gallery img {
     max-width: 200px;
@@ -460,7 +500,7 @@ svg g.hover__flip {
     80% { opacity: 0; }
     100% { opacity: 1; }
 }
-svg g.hover__stars  {
+.hover__stars  {
     transform-origin: 50% 50%;
     transform-box: fill-box;
     transform: translate(100, 100);
@@ -468,28 +508,28 @@ svg g.hover__stars  {
     pointer-events: bounding-box;
 }
 /* One */
-svg g.hover__stars:hover path.one {
+.hover__stars:hover path.one {
     cursor: pointer;
     transition: all 2s;
     animation: twilightOne 0.7s infinite;
     animation-timing-function: linear;
 }
 /* Two */
-svg g.hover__stars:hover path.two {
+.hover__stars:hover path.two {
     cursor: pointer;
     transition: all 2s;
     animation: twilightTwo 0.7s infinite;
     animation-timing-function: linear;
 }
 /* Three */
-svg g.hover__stars:hover path.three {
+.hover__stars:hover path.three {
     cursor: pointer;
     transition: all 2s;
     animation: twilightThree 0.7s infinite;
     animation-timing-function: linear;
 }
 /* Lines */
-svg g.hover__stars:hover line.lines {
+.hover__stars:hover line.lines {
     opacity: 0;
 }
 
@@ -498,15 +538,15 @@ svg g.hover__stars:hover line.lines {
 * [F] MOTHER
 *
 */
-svg g.hover__globe  {
+.hover__globe  {
     transform-origin: 50% 50%;
     transform-box: fill-box;
     transform: translate(100, 100);
     cursor: pointer;
     pointer-events: bounding-box;
 }
-svg g.hover__globe:hover ellipse,
-svg g.hover__globe:hover line {
+.hover__globe:hover ellipse,
+.hover__globe:hover line {
     cursor: pointer;
     transition: all 2s;
     animation: slinky 2s infinite;
@@ -523,53 +563,53 @@ svg g.hover__globe:hover line {
     50% { fill: var(--black); }
     100% { fill: var(--green); }
 }
-svg g.hover__grounded  {
+.hover__grounded  {
     transform-origin: 50% 50%;
     transform-box: fill-box;
     transform: translate(100, 100);
     cursor: pointer;
     pointer-events: bounding-box;
-    transition: all 1s;
+    transition: all 0.7s;
 }
 /* One */
-svg g.hover__grounded:hover path.one {
+.hover__grounded:hover path.one {
     cursor: pointer;
-    transition: all 1s;
-    animation: filler 500ms infinite;
+    transition: all 0.7s;
+    animation: filler 50ms infinite;
 }
 /* Two */
-svg g.hover__grounded:hover path.two {
+.hover__grounded:hover path.two {
     cursor: pointer;
-    transition: all 2s;
+    transition: all 1s;
     animation: filler 500ms infinite;
-    animation-delay: 600ms;
+    animation-delay: 60ms;
 }
 /* Three */
-svg g.hover__grounded:hover path.three {
+.hover__grounded:hover path.three {
     cursor: pointer;
-    animation: filler 500ms infinite;
-    animation-delay: 1200ms;
+    animation: filler 0.4s infinite;
+    animation-delay: 120ms;
 }
 /* Four */
-svg g.hover__grounded:hover path.four {
+.hover__grounded:hover path.four {
     cursor: pointer;
-    transition: all 1s;
+    transition: all 0.7s;
     animation: filler 500ms infinite;
-    animation-delay: 1800ms;
+    animation-delay: 180ms;
 }
 /* Five */
-svg g.hover__grounded:hover path.five {
+.hover__grounded:hover path.five {
     cursor: pointer;
-    transition: all 1s;
+    transition: all 0.7s;
     animation: filler 500ms infinite;
-    animation-delay: 2400ms;
+    animation-delay: 240ms;
 }
-/* Five */
-svg g.hover__grounded:hover path.six {
+/* Six */
+.hover__grounded:hover path.six {
     cursor: pointer;
-    transition: all 1s;
+    transition: all 0.7s;
     animation: filler 500ms infinite;
-    animation-delay: 3000ms;
+    animation-delay: 300ms;
 }
 
 /*
@@ -592,7 +632,7 @@ svg g.hover__grounded:hover path.six {
     50% { transform: translateY(-30px); }
     100% { transform: translateY(0); }
 }
-svg g.hover__tube  {
+.hover__tube  {
     transform-origin: 50% 50%;
     transform-box: fill-box;
     transform: translate(100, 100);
@@ -601,19 +641,19 @@ svg g.hover__tube  {
     transition: all 1s;
 }
 /* Top */
-svg g.hover__tube:hover ellipse.top {
+.hover__tube:hover ellipse.top {
     cursor: pointer;
     transition: all 2s;
     animation: tubeTop 1s infinite;
 }
 /* Middle */
-svg g.hover__tube:hover ellipse.middle {
+.hover__tube:hover ellipse.middle {
     cursor: pointer;
     transition: all 2s;
     animation: tubeMiddle 1s infinite;
 }
 /* Bottom */
-svg g.hover__tube:hover ellipse.bottom {
+.hover__tube:hover ellipse.bottom {
     cursor: pointer;
     transition: all 2s;
     animation: tubeBottom 1s infinite;
@@ -627,6 +667,7 @@ svg g.hover__tube:hover ellipse.bottom {
 footer p {
     font-size: 2rem;
 }
+
 
 /*
 * ==============================
