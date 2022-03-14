@@ -80,7 +80,6 @@ hr {
 *
 */
 main#main {
-    padding: 10px 20px;
     width: 100%;
 }
 
@@ -198,7 +197,7 @@ section.two .logo img {
 section.two .desc {
     font-size: 6vw;
     color: var(--black);
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 60px;
 }
 section.two .desc p {

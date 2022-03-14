@@ -619,15 +619,15 @@
 
         window.onscroll = function() {
 
-            var currentScrollPos = window.pageYOffset /3;
-            var divided = currentScrollPos / 2.5;
+            var currentScrollPos = window.pageYOffset /4;
+            var divided = currentScrollPos / 2;
 
             // Move Logo
             $('.logo > img').css({
                 width: 100 - currentScrollPos + '%'
             });
 
-            if (currentScrollPos > 60) {
+            if (currentScrollPos > 110) {
                 $('.vimeo').css({
                     opacity: '1',
                     width: divided + '%',
@@ -639,6 +639,10 @@
                 $('.gallery__alt > .overlay').css({
                     paddingTop: divided - 300,
                 });
+
+                $('.gallery__alt > .photos').css({
+                    margin: divided - 100
+                })
 
                 // $('section.two > .desc').css({
                 //     paddingTop: '40px',
