@@ -79,9 +79,16 @@ hr {
 * Main Container
 *
 */
+body {
+}
+
 main#main {
     width: 100%;
+    top: 0;
+    /* overflow-y: scroll; */
+    height: 100%;
 }
+
 
 /*
 *
@@ -95,7 +102,7 @@ header.nav.desktop {
     text-transform: uppercase;
 }
 header.nav.desktop p {
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
     font-size: 1.1vw;
     white-space: nowrap;
 }
@@ -117,16 +124,7 @@ header.nav.desktop .right {
     text-align: right;
 }
 
-.logo > img {
-    min-width: 180px;
-    width: 90vw;
-    max-width: 90vw;
-    position: fixed;
-    top: 10px;
-    left: 0;
-    right: 0;
-    margin: 0 auto 0 auto;
-}
+
 
 /*
 *
@@ -141,13 +139,12 @@ section.one {
     left: 0;
     z-index: 999999;
     background: var(--green);
-}
-section.one .row {
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
+    
 }
 section.one h1 {
     font-size: 16vw;
@@ -162,15 +159,66 @@ section.one .are-here {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    padding: 0 10vw 0 10vw;
+    padding: 0 10px 0 10px;
 }
 @keyframes slideFlash {
     0% { opacity: 1; }
-    25% { opacity: 0; }
-    50% { opacity: 1; }
-    75% { opacity: 0; }
-    100% { opacity: 1; }
+    33% { opacity: 0; }
+    66% { opacity: 1; }
+    100% { opacity: 0; }
 }
+
+/*
+*
+* Logo
+*
+*/
+/* .logo {
+    width: 100%;
+    max-width: 100%;
+    z-index: 999;
+    top: 0;
+    padding: 20px;
+} */
+
+.logo {
+    /* position: sticky;
+    right: 0;
+    left: 0;
+    top: 0; */
+
+}
+.scroll-container {
+    position: relative;
+}
+.sticky {
+    position: fixed;
+    /* float: left; */
+    z-index: 9999;
+    top: -100px;
+    left: 10px;
+    right: 0;
+    width: 140px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.sticky svg {
+    margin: 0 auto;
+    min-width: 120px;
+    width: 120px;
+    /* max-height: 90vh; */
+}
+svg.logo {
+    margin: 0 auto 0 auto;
+    min-width: 120px;
+    width: 100vw;
+    max-width: 100vw;
+    /* opacity: 0; */
+}
+
+.desc {
+}
+
 
 /*
 *
@@ -178,9 +226,8 @@ section.one .are-here {
 *
 */
 section.two {
-    position: relative;
-    min-height: 100vh;
     padding-top: 0px;
+    position: sticky;
 }
 section.two nav {
     display: flex;
@@ -196,37 +243,38 @@ section.two nav ul {
     justify-content: space-between;
     min-width: 10vw;
 }
-section.two .logo {
-    position: absolute;
+.logo {
     width: 100%;
+    max-width: 100%;
     z-index: 999;
     top: 0;
+    padding: 20px;
 }
-section.two .logo img {
-    width: 100%;
-    min-height: 100px;
-    height: 100vh;
-    /* transition: width 0.6s; */
+
+section.two .logo svg {
+    margin: 0 auto;
+    max-width: 80vw;
+    min-width: 200px;
+    width: 100vw;
 }
 section.two .desc {
-    font-size: 6vw;
+    font-size: 6vw; 
     max-width: 95vw;
-    margin:0px auto;
+    margin: 0 auto;
+
    
     color: var(--black);
-    padding-top: 101vh;
-    padding-bottom: 60px;
 }
 section.two .desc p {
     text-align: center;
     text-align-last: center;
     text-justify: inter-word;
     line-height: 1.1;
-    letter-spacing: 2px;
+    letter-spacing: 0.5px;
     padding: 0;
     margin: 0;
 }
-section.two .desc svg {
+section.two .desc p svg {
     display: inline;
     max-width: 9vw;
     margin-bottom: -10px;
@@ -237,16 +285,24 @@ section.two .desc p.location {
     width: 100%;
     font-size: 4.9rem;
 }
+
+
+/*
+*
+* Vimeo
+*
+*/
 .vimeo {
-    opacity: 0;
+    /* position: sticky;
+    top: 0; */
+    opacity: 1;
     transition: opacity 1000ms;
-    display: block;
-    margin-bottom: 100px;
+    margin: 80px auto 80px auto;
+    max-width: 60vw;
 }
 .vimeo iframe {
     margin: 0 auto 0 auto;
-    width: 0vw;
-    max-width: 100vw;
+    width: 100%;
 }
 
 /*
@@ -255,9 +311,13 @@ section.two .desc p.location {
 *
 */
 section.sign-up {
+    /* position: sticky;
+    top: 0; */
     width: 100%;
     max-width: 95vw;
-    margin: 200px auto;
+    padding: 100px 0px 160px 0px;
+    /* margin: 200px auto;
+    position: relative; */
 }
 section.sign-up p {
     font-size: 12vw;
