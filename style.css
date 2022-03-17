@@ -347,31 +347,41 @@ section.sign-up input[type="email"] {
     text-transform: uppercase;
     color: var(--black);
     border: 0;
+    padding: 0 !important;
+    white-space: nowrap;
 }
 section.sign-up input[type="email"]:focus-visible {
     outline: none;
     border: 0;
+    padding: 0 !important;
 }
 .mce_inline_error {
     font-size: 1rem;
+    padding: 0 !important;
 }
 section.sign-up input[type="email"]::-webkit-input-placeholder {
     color: var(--black);
+    padding: 0 !important;
 }
 section.sign-up input[type="email"]::-moz-placeholder {
     color: var(--black);
+    padding: 0 !important;
 }
 section.sign-up input[type="email"]:-ms-input-placeholder {
     color: var(--black);
+    padding: 0 !important;
 }
 section.sign-up input[type="email"]::-ms-input-placeholder {
     color: var(--black);
+    padding: 0 !important;
 }
 section.sign-up input[type="email"]::placeholder {
     color: var(--black);
+    padding: 0 !important;
 }
 section.sign-up input[type="email"]:focus {
     border: 0;
+    padding: 0 !important;
 }
 section.sign-up input[type="submit"], .clear {
     background: transparent;
@@ -382,6 +392,8 @@ section.sign-up input[type="submit"], .clear {
     color: var(--black);
     text-align: right;
     letter-spacing: -2px;
+    padding: 0 !important;
+    white-space: nowrap;
 }
 .clear {
     font-size: 5vw;
@@ -996,6 +1008,16 @@ footer.contact {
     }
     section.one .are-here {
         margin-bottom: 70px;
+    }
+
+    section.sign-up input[type="email"] {
+        font-size: 5vw;
+        letter-spacing: -1px;
+    }
+
+    footer p {
+        font-size: 1.2rem;
+        letter-spacing: 0px;
     }
 }
 
