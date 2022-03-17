@@ -104,6 +104,7 @@ header.nav.desktop {
     width: 100%;
     max-width: 100%;
     position: relative;
+    z-index: 99999;
     text-transform: uppercase;
 }
 header.nav.desktop p {
@@ -188,8 +189,6 @@ section.one .are-here {
 }
 .hero svg {
     width: 80vw;
-    mix-blend-mode: color-burn;
-    opacity: 0.5;
 }
 .hero video {
     position: absolute;
