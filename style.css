@@ -200,32 +200,6 @@ section.one .are-here {
     height: 100vh;
     object-fit: cover;
 }
-
-/*
-*
-* About
-*
-*/
-section.about--mobile {
-    display: none;
-}
-section.about {
-    padding: 40px 0px;
-}
-section.about nav {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-}
-section.about nav ul {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    min-width: 10vw;
-}
 .logo {
     width: 100%;
     max-height: 80vh;
@@ -234,19 +208,23 @@ section.about nav ul {
     padding: 20px;
 }
 
-section.about .logo svg {
-    margin: 0 auto;
-    max-width: 80vw;
-    min-width: 200px;
-    width: 100vw;
+
+/*
+*
+* About
+*
+*/
+section.about {
+    padding: 0px 0px 5vw 0px;
 }
+
 section.about .desc {
     /* max-width: 98vw; */
     margin: 0 auto;
     color: var(--black);
 }
 section.about .desc p {
-    font-size: 6vw; 
+    font-size: 6.5vw; 
     text-align: center;
     text-align-last: center;
     text-justify: inter-word;
@@ -262,73 +240,6 @@ section.about .desc p svg {
     margin-bottom: -10px;
 }
 section.about .desc p.location {
-    text-align: center;
-    padding-top: 4vw;
-    width: 100%;
-    font-size: 5vw;
-    white-space: nowrap;
-}
-
-
-/*
-*
-* ABOUT -- MOBILE
-*
- */
-section.about--mobile {
-    padding: 10px 0px 50px 0px;
-}
-section.about--mobile nav {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-}
-section.about--mobile nav ul {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    min-width: 10vw;
-}
-.logo--mobile {
-    width: 100%;
-    max-height: 80vh;
-    z-index: 999;
-    top: 0;
-    padding: 20px;
-}
-
-section.about--mobile .logo svg {
-    margin: 0 auto;
-    max-width: 80vw;
-    min-width: 200px;
-    width: 100vw;
-}
-section.about--mobile .desc {
-    /* max-width: 98vw; */
-    max-width: 100vw;
-    margin: 0 auto;
-    color: var(--black);
-}
-section.about--mobile .desc p {
-    font-size: 6vw; 
-    text-align: center;
-    text-align-last: center;
-    text-justify: inter-word;
-    line-height: 0.9;
-    letter-spacing: -1px;
-    padding: 0;
-    margin: 0;
-    white-space: nowrap;
-}
-section.about--mobile .desc p svg {
-    display: inline;
-    max-width: 9vw;
-    margin-bottom: -3px;
-}
-section.about--mobile .desc p.location {
     text-align: center;
     padding-top: 4vw;
     width: 100%;
@@ -357,6 +268,8 @@ section.sign-up {
 }
 section.sign-up p {
     letter-spacing: -2px;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 section.sign-up .intro p {
     letter-spacing: 0.0002em;
@@ -395,6 +308,7 @@ section.sign-up input[type="submit"], .clear {
     background: transparent;
     border: 0;
     font-size: 5vw;
+    font-weight: normal !important;
     text-transform: uppercase;
     color: var(--black);
     text-align: right;
@@ -829,7 +743,16 @@ footer.contact {
 }
 
 @media screen and (max-width: 767px) {
+    section.about .desc p svg {
+        display: inline;
+        max-width: 10vw;
+        margin-bottom: -4px;
+    }
 
+    section.about .desc p {
+        font-size: 7vw; 
+        letter-spacing: -2px;
+    }
 }
 
 /* MEDIUM */
@@ -843,18 +766,8 @@ footer.contact {
     section.two .desc {
         font-size: 6vw;
     }
-    section.two .desc img {
-        display: inline;
-        max-width: 10vw;
-    }
 
 
-    section.about {
-        display: none;
-    }
-    section.about--mobile {
-        display: block;
-    }
 }
 
 /* SMALL */
