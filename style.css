@@ -270,7 +270,11 @@ section.about .desc p.location {
 }
 
 
-/* mobile */
+/*
+*
+* ABOUT -- MOBILE
+*
+ */
 section.about--mobile {
     padding: 10px 0px 50px 0px;
 }
@@ -335,25 +339,7 @@ section.about--mobile .desc p.location {
 
 /*
 *
-* Vimeo
-*
-*/
-/* .vimeo {
-    position: sticky;
-    top: 0;
-    opacity: 1;
-    transition: opacity 1000ms;
-    margin: 80px auto 80px auto;
-    max-width: 60vw;
-}
-.vimeo iframe {
-    margin: 0 auto 0 auto;
-    width: 100%;
-} */
-
-/*
-*
-* Slide 03: Sign up
+* Sign up
 *
 */
 section.sign-up {
@@ -361,13 +347,19 @@ section.sign-up {
     top: 0; */
     width: 100%;
     max-width: 95vw;
-    padding: 10vw 10px 10vw 10px;
+    padding: 5vw 10px 5vw 10px;
     margin: 0px auto;
     /* margin: 200px auto;
     position: relative; */
     font-size: 12vw;
     text-transform: uppercase;
     line-height: 0.8;
+}
+section.sign-up p {
+    letter-spacing: -2px;
+}
+section.sign-up .intro p {
+    letter-spacing: 0.0002em;
 }
 section.sign-up .email #mc_embed_signup_scroll {
     width: 100%;
@@ -376,11 +368,12 @@ section.sign-up .email #mc_embed_signup_scroll {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     border-bottom: 3px solid var(--black);
-    padding: 8vw 0 10px 0;
+    padding: 0vw 0 10px 0;
 }
 section.sign-up input[type="email"] {
     background: transparent;
     font-size: 5vw;
+    letter-spacing: -2px;
     text-transform: uppercase;
     color: var(--black);
     border: 0;
@@ -405,6 +398,7 @@ section.sign-up input[type="submit"], .clear {
     text-transform: uppercase;
     color: var(--black);
     text-align: right;
+    letter-spacing: -2px;
 }
 .clear {
     font-size: 5vw;
@@ -426,7 +420,7 @@ section.gallery__alt {
     width: 100%;
     max-width: 95vw;
     margin: 0 auto;
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
 
 }
 section.gallery__alt .photos {
@@ -519,7 +513,7 @@ section.gallery__alt .photos .image-eight {
     width: 22vw;
     height: auto;
     position: absolute;
-    top: 145vw;
+    top: 138vw;
     left: 0;
     overflow: hidden;
 }
