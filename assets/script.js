@@ -20,34 +20,15 @@ window.onscroll = function() {
     
 
     // Move Logo
-    logo.css({
-        width: 100 - divided + 'vw'
-    });
+    // logo.css({
+    //     width: 100 - divided + 'vw'
+    // });
 
     // second.css({
     //     height: 90 - divided + 'vh'
     // });
 
 
-    if ( currentScrollPos >= theWidth ) {
-
-   
-        $('.sticky').css({
-            opacity: 1,
-            top: '10px'
-        })
-
-        console.log('it is')
-
-    } else {
-
-        $('.sticky').css({
-            top: '-100px',
-            opacity: 0
-        })
-
-
-    }
 
 
 }
