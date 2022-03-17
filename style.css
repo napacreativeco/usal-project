@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/*
 * Theme name: USAL
 */
 
@@ -31,7 +38,8 @@
 *
 */
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 body, html {
     margin: 0;
@@ -113,10 +121,16 @@ header.nav.desktop p {
     white-space: nowrap;
 }
 header.nav.desktop .row {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     top: 0px;
     right: 10px;
@@ -147,25 +161,49 @@ section.one {
     background: var(--green);
     height: 100vh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     
 }
 section.one h1 {
     font-size: 16vw;
     text-transform: uppercase;
     text-align: center;
-    animation: slideFlash 1800ms;
-    animation-delay: 300ms;
+    -webkit-animation: slideFlash 1800ms;
+            animation: slideFlash 1800ms;
+    -webkit-animation-delay: 300ms;
+            animation-delay: 300ms;
     opacity: 0;
 }
 section.one .are-here {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0 10px 0 10px;
+}
+@-webkit-keyframes slideFlash {
+    0% { opacity: 1; }
+    33% { opacity: 0; }
+    66% { opacity: 1; }
+    100% { opacity: 0; }
 }
 @keyframes slideFlash {
     0% { opacity: 1; }
@@ -183,9 +221,15 @@ section.one .are-here {
 .hero {
     position: relative;
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .hero svg {
     width: 80vw;
@@ -198,7 +242,8 @@ section.one .are-here {
     left: 0;
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .logo {
     width: 100%;
@@ -226,7 +271,8 @@ section.about .desc {
 section.about .desc p {
     font-size: 6.5vw; 
     text-align: center;
-    text-align-last: center;
+    -moz-text-align-last: center;
+         text-align-last: center;
     text-justify: inter-word;
     line-height: 0.9;
     letter-spacing: -3px;
@@ -277,11 +323,22 @@ section.sign-up .intro p {
 section.sign-up .email #mc_embed_signup_scroll {
     width: 100%;
     max-width: 100%;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 2fr 1fr;
     grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
     border-bottom: 3px solid var(--black);
     padding: 0vw 0 10px 0;
+}
+section.sign-up .email #mc_embed_signup_scroll > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+section.sign-up .email #mc_embed_signup_scroll > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
 }
 section.sign-up input[type="email"] {
     background: transparent;
@@ -297,6 +354,18 @@ section.sign-up input[type="email"]:focus-visible {
 }
 .mce_inline_error {
     font-size: 1rem;
+}
+section.sign-up input[type="email"]::-webkit-input-placeholder {
+    color: var(--black);
+}
+section.sign-up input[type="email"]::-moz-placeholder {
+    color: var(--black);
+}
+section.sign-up input[type="email"]:-ms-input-placeholder {
+    color: var(--black);
+}
+section.sign-up input[type="email"]::-ms-input-placeholder {
+    color: var(--black);
 }
 section.sign-up input[type="email"]::placeholder {
     color: var(--black);
@@ -319,9 +388,15 @@ section.sign-up input[type="submit"], .clear {
 }
 
 .submitter {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 /*
@@ -347,7 +422,8 @@ section.gallery__alt .photos {
 }
 section.gallery__alt .photos img {
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 /* Image 1 */
@@ -446,18 +522,32 @@ section.gallery img {
     max-width: 200px;
 }
 section.gallery img.hovery:hover {
-    animation: rotater 2s infinite;
+    -webkit-animation: rotater 2s infinite;
+            animation: rotater 2s infinite;
+}
+@-webkit-keyframes rotater {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }
 @keyframes rotater {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }
 section.gallery .line-item {
     max-width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 section.gallery .line-item p {
     margin-bottom: 20px;
@@ -472,21 +562,31 @@ section.gallery .line-item p {
 */
 svg g.hover__rotate:hover {
     cursor: pointer;
+    -webkit-transition: -webkit-transform 2s;
+    transition: -webkit-transform 2s;
+    -o-transition: transform 2s;
     transition: transform 2s;
-    animation: rotater 2s infinite;
-    animation-timing-function: linear;
+    transition: transform 2s, -webkit-transform 2s;
+    -webkit-animation: rotater 2s infinite;
+            animation: rotater 2s infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 svg g.hover__rotate {
-    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
     transform-box: fill-box;
-    transform: translate(100, 100);
+    -webkit-transform: translate(100, 100);
+        -ms-transform: translate(100, 100);
+            transform: translate(100, 100);
     cursor: pointer;
     pointer-events: bounding-box;
 }
 @keyframes rotater {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(180deg); }
-    100% { transform: rotate(360deg); }
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    50% { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 
 }
 
@@ -495,6 +595,11 @@ svg g.hover__rotate {
 * [B] FOUNDATION
 * 
 */
+@-webkit-keyframes slinky {
+    0% { stroke-width: 3.8px; }
+    50% { stroke-width: 8.5px; }
+    100% { stroke-width: 3.8px; }
+}
 @keyframes slinky {
     0% { stroke-width: 3.8px; }
     50% { stroke-width: 8.5px; }
@@ -502,18 +607,31 @@ svg g.hover__rotate {
 }
 svg g.hover__slinky:hover ellipse {
     cursor: pointer;
+    -webkit-transition: stroke-width 2s;
+    -o-transition: stroke-width 2s;
     transition: stroke-width 2s;
-    animation: slinky 2s infinite;
-    animation-timing-function: linear;
+    -webkit-animation: slinky 2s infinite;
+            animation: slinky 2s infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 svg g.hover__slinky {
-    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
     transform-box: fill-box;
-    transform: translate(100, 100);
+    -webkit-transform: translate(100, 100);
+        -ms-transform: translate(100, 100);
+            transform: translate(100, 100);
     cursor: pointer;
     pointer-events: bounding-box;
 }
 /* [C] PATHFIND */
+@-webkit-keyframes blinker {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
 @keyframes blinker {
     0% { opacity: 1; }
     50% { opacity: 0; }
@@ -521,14 +639,22 @@ svg g.hover__slinky {
 }
 svg g.hover__flip:hover path {
     cursor: pointer;
+    -webkit-transition: opacity 2s;
+    -o-transition: opacity 2s;
     transition: opacity 2s;
-    animation: blinker 0.3s infinite;
-    animation-timing-function: linear;
+    -webkit-animation: blinker 0.3s infinite;
+            animation: blinker 0.3s infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 svg g.hover__flip {
-    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
     transform-box: fill-box;
-    transform: translate(100, 100);
+    -webkit-transform: translate(100, 100);
+        -ms-transform: translate(100, 100);
+            transform: translate(100, 100);
     cursor: pointer;
     pointer-events: bounding-box;
 }
@@ -538,14 +664,29 @@ svg g.hover__flip {
 * [E] NORTHSTAR
 *
 */
+@-webkit-keyframes twilightOne {
+    0% { opacity: 1; }
+    20% { opacity: 0; }
+    100% { opacity: 1; }
+}
 @keyframes twilightOne {
     0% { opacity: 1; }
     20% { opacity: 0; }
     100% { opacity: 1; }
 }
+@-webkit-keyframes twilightTwo {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
 @keyframes twilightTwo {
     0% { opacity: 1; }
     50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-webkit-keyframes twilightThree {
+    0% { opacity: 1; }
+    80% { opacity: 0; }
     100% { opacity: 1; }
 }
 @keyframes twilightThree {
@@ -554,32 +695,48 @@ svg g.hover__flip {
     100% { opacity: 1; }
 }
 .hover__stars  {
-    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
     transform-box: fill-box;
-    transform: translate(100, 100);
+    -webkit-transform: translate(100, 100);
+        -ms-transform: translate(100, 100);
+            transform: translate(100, 100);
     cursor: pointer;
     pointer-events: bounding-box;
 }
 /* One */
 .hover__stars:hover path.one {
     cursor: pointer;
+    -webkit-transition: opacity 2s;
+    -o-transition: opacity 2s;
     transition: opacity 2s;
-    animation: twilightOne 0.7s infinite;
-    animation-timing-function: linear;
+    -webkit-animation: twilightOne 0.7s infinite;
+            animation: twilightOne 0.7s infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 /* Two */
 .hover__stars:hover path.two {
     cursor: pointer;
+    -webkit-transition: opacity 2s;
+    -o-transition: opacity 2s;
     transition: opacity 2s;
-    animation: twilightTwo 0.7s infinite;
-    animation-timing-function: linear;
+    -webkit-animation: twilightTwo 0.7s infinite;
+            animation: twilightTwo 0.7s infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 /* Three */
 .hover__stars:hover path.three {
     cursor: pointer;
+    -webkit-transition: opacity 2s;
+    -o-transition: opacity 2s;
     transition: opacity 2s;
-    animation: twilightThree 0.7s infinite;
-    animation-timing-function: linear;
+    -webkit-animation: twilightThree 0.7s infinite;
+            animation: twilightThree 0.7s infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 /* Lines */
 .hover__stars:hover line.lines {
@@ -592,18 +749,26 @@ svg g.hover__flip {
 *
 */
 .hover__globe  {
-    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
     transform-box: fill-box;
-    transform: translate(100, 100);
+    -webkit-transform: translate(100, 100);
+        -ms-transform: translate(100, 100);
+            transform: translate(100, 100);
     cursor: pointer;
     pointer-events: bounding-box;
 }
 .hover__globe:hover ellipse,
 .hover__globe:hover line {
     cursor: pointer;
+    -webkit-transition: stroke-width 2s;
+    -o-transition: stroke-width 2s;
     transition: stroke-width 2s;
-    animation: slinky 2s infinite;
-    animation-timing-function: linear;
+    -webkit-animation: slinky 2s infinite;
+            animation: slinky 2s infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 
 /*
@@ -611,58 +776,90 @@ svg g.hover__flip {
 * [G] GROUNDED
 *
 */
+@-webkit-keyframes filler {
+    0% { fill: none; }
+    50% { fill: var(--black); }
+    100% { fill: var(--green); }
+}
 @keyframes filler {
     0% { fill: none; }
     50% { fill: var(--black); }
     100% { fill: var(--green); }
 }
 .hover__grounded  {
-    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
     transform-box: fill-box;
-    transform: translate(100, 100);
+    -webkit-transform: translate(100, 100);
+        -ms-transform: translate(100, 100);
+            transform: translate(100, 100);
     cursor: pointer;
     pointer-events: bounding-box;
+    -webkit-transition: fill 0.7s;
+    -o-transition: fill 0.7s;
     transition: fill 0.7s;
 }
 /* One */
 .hover__grounded:hover path.one {
     cursor: pointer;
+    -webkit-transition: fill 0.7s;
+    -o-transition: fill 0.7s;
     transition: fill 0.7s;
-    animation: filler 50ms infinite;
+    -webkit-animation: filler 50ms infinite;
+            animation: filler 50ms infinite;
 }
 /* Two */
 .hover__grounded:hover path.two {
     cursor: pointer;
+    -webkit-transition: fill 1s;
+    -o-transition: fill 1s;
     transition: fill 1s;
-    animation: filler 500ms infinite;
-    animation-delay: 60ms;
+    -webkit-animation: filler 500ms infinite;
+            animation: filler 500ms infinite;
+    -webkit-animation-delay: 60ms;
+            animation-delay: 60ms;
 }
 /* Three */
 .hover__grounded:hover path.three {
     cursor: pointer;
-    animation: filler 0.4s infinite;
-    animation-delay: 120ms;
+    -webkit-animation: filler 0.4s infinite;
+            animation: filler 0.4s infinite;
+    -webkit-animation-delay: 120ms;
+            animation-delay: 120ms;
 }
 /* Four */
 .hover__grounded:hover path.four {
     cursor: pointer;
+    -webkit-transition: fill 0.7s;
+    -o-transition: fill 0.7s;
     transition: fill 0.7s;
-    animation: filler 500ms infinite;
-    animation-delay: 180ms;
+    -webkit-animation: filler 500ms infinite;
+            animation: filler 500ms infinite;
+    -webkit-animation-delay: 180ms;
+            animation-delay: 180ms;
 }
 /* Five */
 .hover__grounded:hover path.five {
     cursor: pointer;
+    -webkit-transition: fill 0.7s;
+    -o-transition: fill 0.7s;
     transition: fill 0.7s;
-    animation: filler 500ms infinite;
-    animation-delay: 240ms;
+    -webkit-animation: filler 500ms infinite;
+            animation: filler 500ms infinite;
+    -webkit-animation-delay: 240ms;
+            animation-delay: 240ms;
 }
 /* Six */
 .hover__grounded:hover path.six {
     cursor: pointer;
+    -webkit-transition: fill 0.7s;
+    -o-transition: fill 0.7s;
     transition: fill 0.7s;
-    animation: filler 500ms infinite;
-    animation-delay: 300ms;
+    -webkit-animation: filler 500ms infinite;
+            animation: filler 500ms infinite;
+    -webkit-animation-delay: 300ms;
+            animation-delay: 300ms;
 }
 
 /*
@@ -670,46 +867,84 @@ svg g.hover__flip {
 * [H] GROWTH
 *
 */
+@-webkit-keyframes tubeTop {
+    0% { -webkit-transform: translateY(0); transform: translateY(0); }
+    50% { -webkit-transform: translateY(30px); transform: translateY(30px); }
+    100% { -webkit-transform: translateY(0); transform: translateY(0); }
+}
 @keyframes tubeTop {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(30px); }
-    100% { transform: translateY(0); }
+    0% { -webkit-transform: translateY(0); transform: translateY(0); }
+    50% { -webkit-transform: translateY(30px); transform: translateY(30px); }
+    100% { -webkit-transform: translateY(0); transform: translateY(0); }
+}
+@-webkit-keyframes tubeMiddle {
+    0% { -webkit-transform: translateY(0); transform: translateY(0); }
+    50% { -webkit-transform: translateY(0px); transform: translateY(0px); }
+    100% { -webkit-transform: translateY(0); transform: translateY(0); }
 }
 @keyframes tubeMiddle {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(0px); }
-    100% { transform: translateY(0); }
+    0% { -webkit-transform: translateY(0); transform: translateY(0); }
+    50% { -webkit-transform: translateY(0px); transform: translateY(0px); }
+    100% { -webkit-transform: translateY(0); transform: translateY(0); }
+}
+@-webkit-keyframes tubeBottom {
+    0% { -webkit-transform: translateY(0); transform: translateY(0); }
+    50% { -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+    100% { -webkit-transform: translateY(0); transform: translateY(0); }
 }
 @keyframes tubeBottom {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-30px); }
-    100% { transform: translateY(0); }
+    0% { -webkit-transform: translateY(0); transform: translateY(0); }
+    50% { -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+    100% { -webkit-transform: translateY(0); transform: translateY(0); }
 }
 .hover__tube  {
-    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
     transform-box: fill-box;
-    transform: translate(100, 100);
+    -webkit-transform: translate(100, 100);
+        -ms-transform: translate(100, 100);
+            transform: translate(100, 100);
     cursor: pointer;
     pointer-events: bounding-box;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
     transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
 }
 /* Top */
 .hover__tube:hover ellipse.top {
     cursor: pointer;
+    -webkit-transition: -webkit-transform 2s;
+    transition: -webkit-transform 2s;
+    -o-transition: transform 2s;
     transition: transform 2s;
-    animation: tubeTop 1s infinite;
+    transition: transform 2s, -webkit-transform 2s;
+    -webkit-animation: tubeTop 1s infinite;
+            animation: tubeTop 1s infinite;
 }
 /* Middle */
 .hover__tube:hover ellipse.middle {
     cursor: pointer;
+    -webkit-transition: -webkit-transform 2s;
+    transition: -webkit-transform 2s;
+    -o-transition: transform 2s;
     transition: transform 2s;
-    animation: tubeMiddle 1s infinite;
+    transition: transform 2s, -webkit-transform 2s;
+    -webkit-animation: tubeMiddle 1s infinite;
+            animation: tubeMiddle 1s infinite;
 }
 /* Bottom */
 .hover__tube:hover ellipse.bottom {
     cursor: pointer;
+    -webkit-transition: -webkit-transform 2s;
+    transition: -webkit-transform 2s;
+    -o-transition: transform 2s;
     transition: transform 2s;
-    animation: tubeBottom 1s infinite;
+    transition: transform 2s, -webkit-transform 2s;
+    -webkit-animation: tubeBottom 1s infinite;
+            animation: tubeBottom 1s infinite;
 }
 
 /*
@@ -721,9 +956,15 @@ footer p {
     font-size: 2rem;
 }
 footer.contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
     padding: 0 14px 4px 14px;
 }
