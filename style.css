@@ -51,6 +51,11 @@ h1, h2, h3, h4, h5, p {
     font-style: normal;
     letter-spacing: -2.5px;
 }
+.mce_inline_error {
+    font-family: 'PP Supply Mono';
+    font-weight: normal;
+    font-style: normal;
+}
 p.typewriter {
     font-family: 'PP Supply Mono';
     font-weight: normal;
@@ -199,20 +204,23 @@ section.one .are-here {
 
 /*
 *
-* Slide 02
+* About
 *
 */
-section.two {
-    padding: 40px 10px;
+section.about--mobile {
+    display: none;
 }
-section.two nav {
+section.about {
+    padding: 40px 0px;
+}
+section.about nav {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
 }
-section.two nav ul {
+section.about nav ul {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -227,19 +235,18 @@ section.two nav ul {
     padding: 20px;
 }
 
-section.two .logo svg {
+section.about .logo svg {
     margin: 0 auto;
     max-width: 80vw;
     min-width: 200px;
     width: 100vw;
 }
-section.two .desc {
-    
-    max-width: 98vw;
+section.about .desc {
+    /* max-width: 98vw; */
     margin: 0 auto;
     color: var(--black);
 }
-section.two .desc p {
+section.about .desc p {
     font-size: 6vw; 
     text-align: center;
     text-align-last: center;
@@ -250,14 +257,77 @@ section.two .desc p {
     margin: 0;
     white-space: nowrap;
 }
-section.two .desc p svg {
+section.about .desc p svg {
     display: inline;
     max-width: 9vw;
     margin-bottom: -10px;
 }
-section.two .desc p.location {
+section.about .desc p.location {
     text-align: center;
-    padding-top: 60px;
+    padding-top: 4vw;
+    width: 100%;
+    font-size: 5vw;
+    white-space: nowrap;
+}
+
+
+/* mobile */
+section.about--mobile {
+    padding: 10px 0px 50px 0px;
+}
+section.about--mobile nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+section.about--mobile nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-width: 10vw;
+}
+.logo--mobile {
+    width: 100%;
+    max-height: 80vh;
+    z-index: 999;
+    top: 0;
+    padding: 20px;
+}
+
+section.about--mobile .logo svg {
+    margin: 0 auto;
+    max-width: 80vw;
+    min-width: 200px;
+    width: 100vw;
+}
+section.about--mobile .desc {
+    /* max-width: 98vw; */
+    max-width: 100vw;
+    margin: 0 auto;
+    color: var(--black);
+}
+section.about--mobile .desc p {
+    font-size: 6vw; 
+    text-align: center;
+    text-align-last: center;
+    text-justify: inter-word;
+    line-height: 0.9;
+    letter-spacing: -1px;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+section.about--mobile .desc p svg {
+    display: inline;
+    max-width: 9vw;
+    margin-bottom: -3px;
+}
+section.about--mobile .desc p.location {
+    text-align: center;
+    padding-top: 4vw;
     width: 100%;
     font-size: 5vw;
     white-space: nowrap;
@@ -292,23 +362,22 @@ section.sign-up {
     top: 0; */
     width: 100%;
     max-width: 95vw;
-    padding: 100px 0px 160px 0px;
+    padding: 10vw 10px 10vw 10px;
     margin: 0px auto;
     /* margin: 200px auto;
     position: relative; */
-}
-section.sign-up p {
     font-size: 12vw;
     text-transform: uppercase;
     line-height: 0.8;
 }
-section.sign-up .email {
+section.sign-up .email #mc_embed_signup_scroll {
     width: 100%;
     max-width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
     border-bottom: 3px solid var(--black);
-    padding: 80px 0 10px 0;
+    padding: 8vw 0 10px 0;
 }
 section.sign-up input[type="email"] {
     background: transparent;
@@ -317,19 +386,35 @@ section.sign-up input[type="email"] {
     color: var(--black);
     border: 0;
 }
+section.sign-up input[type="email"]:focus-visible {
+    outline: none;
+    border: 0;
+}
+.mce_inline_error {
+    font-size: 1rem;
+}
 section.sign-up input[type="email"]::placeholder {
     color: var(--black);
 }
 section.sign-up input[type="email"]:focus {
     border: 0;
 }
-section.sign-up input[type="submit"] {
+section.sign-up input[type="submit"], .clear {
     background: transparent;
     border: 0;
     font-size: 5vw;
     text-transform: uppercase;
     color: var(--black);
     text-align: right;
+}
+.clear {
+    font-size: 5vw;
+}
+
+.submitter {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 /*
@@ -751,9 +836,7 @@ footer.contact {
 }
 
 @media screen and (max-width: 767px) {
-    section.two .desc p {
-        letter-spacing: 1px;
-    }
+
 }
 
 /* MEDIUM */
@@ -770,6 +853,14 @@ footer.contact {
     section.two .desc img {
         display: inline;
         max-width: 10vw;
+    }
+
+
+    section.about {
+        display: none;
+    }
+    section.about--mobile {
+        display: block;
     }
 }
 
