@@ -59,10 +59,12 @@ h1, h2, h3, h4, h5, p {
     font-style: normal;
     letter-spacing: -2.5px;
 }
-.mce_inline_error {
+.mce_inline_error, .response {
     font-family: 'PP Supply Mono';
     font-weight: normal;
     font-style: normal;
+    font-size: 2rem;
+    text-align: left;
 }
 p.typewriter {
     font-family: 'PP Supply Mono';
@@ -148,10 +150,10 @@ header.nav.desktop .right {
 
 /*
 *
-* Slide 01
+* Loading Screen
 *
 */
-section.one {
+section.loading {
     position: fixed;
     top: 0;
     right: 0;
@@ -159,6 +161,9 @@ section.one {
     left: 0;
     z-index: 999999;
     background: var(--green);
+    -webkit-transition: all 1200ms;
+    -o-transition: all 1200ms;
+    transition: all 1200ms;
     height: 100vh;
     width: 100%;
     display: -webkit-box;
@@ -173,17 +178,22 @@ section.one {
             justify-content: space-between;
     
 }
-section.one h1 {
+section.loading h1 {
     font-size: 16vw;
     text-transform: uppercase;
+    -webkit-transition: all 1200ms;
+    -o-transition: all 1200ms;
+    transition: all 1200ms;
     text-align: center;
-    -webkit-animation: slideFlash 1800ms;
-            animation: slideFlash 1800ms;
-    -webkit-animation-delay: 300ms;
-            animation-delay: 300ms;
+    -webkit-animation: slideFlash 3000ms;
+            animation: slideFlash 3000ms;
+    -webkit-animation-delay: 600ms;
+            animation-delay: 600ms;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
     opacity: 0;
 }
-section.one .are-here {
+section.loading .are-here {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -200,15 +210,17 @@ section.one .are-here {
     padding: 0 10px 0 10px;
 }
 @-webkit-keyframes slideFlash {
-    0% { opacity: 1; }
-    33% { opacity: 0; }
-    66% { opacity: 1; }
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    50% { opacity: 0; }
+    75% { opacity: 1; }
     100% { opacity: 0; }
 }
 @keyframes slideFlash {
-    0% { opacity: 1; }
-    33% { opacity: 0; }
-    66% { opacity: 1; }
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    50% { opacity: 0; }
+    75% { opacity: 1; }
     100% { opacity: 0; }
 }
 
@@ -318,7 +330,7 @@ section.sign-up p {
     margin: 0 !important;
 }
 section.sign-up .intro p {
-    letter-spacing: 0.0002em;
+    letter-spacing: -1vw;
 }
 section.sign-up .email #mc_embed_signup_scroll {
     width: 100%;
@@ -1004,7 +1016,7 @@ footer.contact {
 
     section.about .desc p {
         font-size: 7vw; 
-        letter-spacing: -2px;
+        letter-spacing: -1px;
     }
     section.one .are-here {
         margin-bottom: 70px;
@@ -1017,7 +1029,7 @@ footer.contact {
 
     footer p {
         font-size: 1.2rem;
-        letter-spacing: 0px;
+        letter-spacing: -1px;
     }
 }
 

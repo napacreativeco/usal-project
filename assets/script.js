@@ -1,37 +1,50 @@
 // PRELOADER
 $( document ).ready(function() {
+    // $('.loading').css({
+    //     opacity: 0
+    // });
     setTimeout(function() {
-        $('.loading').fadeOut().hide();
-    }, 2500);
+        $('.loading').css({
+            opacity: 0
+        })
+    }, 4000);
+
+    setTimeout(function() {
+        $('.loading').css({
+            display: 'none'
+        })
+    }, 4500);
+
+    $('#myVideo').trigger('play');
 });
 
 
 // var customFunction = function() {
 
-window.onscroll = function() {
+// window.onscroll = function() {
 
 
-    // var currentScrollPos = window.pageYOffset;
-    var currentScrollPos = $(window).scrollTop();
-    var divided = currentScrollPos / 5;
-    var logo = $('.logo');
-    var second = $('.sticky > svg');
-    var theWidth = $('.logo').width();
+//     // var currentScrollPos = window.pageYOffset;
+//     var currentScrollPos = $(window).scrollTop();
+//     var divided = currentScrollPos / 5;
+//     var logo = $('.logo');
+//     var second = $('.sticky > svg');
+//     var theWidth = $('.logo').width();
     
 
-    // Move Logo
-    // logo.css({
-    //     width: 100 - divided + 'vw'
-    // });
+//     // Move Logo
+//     // logo.css({
+//     //     width: 100 - divided + 'vw'
+//     // });
 
-    // second.css({
-    //     height: 90 - divided + 'vh'
-    // });
-
-
+//     // second.css({
+//     //     height: 90 - divided + 'vh'
+//     // });
 
 
-}
+
+
+// }
 
 
 // THROTTLE FUNCTION
