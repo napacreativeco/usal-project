@@ -753,6 +753,14 @@ footer.contact {
         font-size: 7vw; 
         letter-spacing: -2px;
     }
+    section.one .are-here {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0 10px 0 10px;
+        margin-bottom: 50px;
+    }
 }
 
 /* MEDIUM */
