@@ -18,6 +18,28 @@ $( document ).ready(function() {
     $('#myVideo').trigger('play');
 });
 
+// $('#mc-embedded-subscribe-form').on('submit', function() {
+//     $('#mce-success-response').html('Thank you for subscribing');
+// });
+
+// select the target node
+var target = document.getElementById('mce-success-response');
+
+// create an observer instance
+var observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (target.innerHTML === "Thank you for subscribing!") {
+      target.innerHTML = "Thank you for subscribing";
+    }
+  });
+});
+
+// configuration of the observer:
+var config = { attributes: true, childList: true, characterData: true };
+
+// pass in the target node, as well as the observer options
+observer.observe(target, config);
+
 
 // var customFunction = function() {
 
