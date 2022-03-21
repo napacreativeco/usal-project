@@ -1042,9 +1042,10 @@ footer.contact {
         letter-spacing: -1px;
     }
 
-    footer p {
+    footer p,
+    footer a {
         font-size: 1.2rem;
-        letter-spacing: -1px;
+        letter-spacing: 0px;
     }
 }
 
