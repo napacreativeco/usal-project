@@ -230,25 +230,25 @@ section.loading .are-here {
 
 /*
 *
-* Logo
+* Hero
 *
 */
-
 .hero {
     position: relative;
     height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.hero svg {
-    width: 80vw;
+.hero svg.logo {
+    width: 70vw;
+}
+.hero .desktop-video {
+
+}
+.hero .mobile-video {
+    display: none;
 }
 .hero video {
     position: absolute;
@@ -260,13 +260,29 @@ section.loading .are-here {
     height: 100vh;
     -o-object-fit: cover;
        object-fit: cover;
+    z-index: -1;
 }
 .logo {
     width: 100%;
-    max-height: 80vh;
+    max-height: 50vh;
     z-index: 999;
     top: 0;
     padding: 20px;
+}
+/* Tagline */
+.hero .tagline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 60vw;
+}
+.hero .tagline svg {
+    height: 3vw;
+    /* max-height: 3vw; */
+    fill: var(--black);
+    stroke: var(--black);
 }
 
 
@@ -308,6 +324,35 @@ section.about .desc p.location {
     font-size: 6.5vw;
     white-space: nowrap;
 }
+
+/*
+*
+* SVG CLASSES
+*
+*/
+.hover__tube ellipse {
+    fill:none; stroke: var(--black);stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;
+}
+.star-line {
+    stroke-width: 4px; stroke: var(--black);
+}
+.star {
+    stroke: none;stroke-linecap:round;stroke-linejoin:round; stroke-width:4px;
+}
+.hover__globe ellipse,
+.hover__globe line {
+    fill:none; stroke:var(--black); stroke-linecap:round; stroke-linejoin:round; stroke-width:2.9px;
+}   
+.chasm-one,
+.chasm-two {
+    fill:none;stroke: var(--black); stroke-linecap:round; stroke-linejoin:round;
+}
+.chasm-one { 
+    stroke-width:3.7px;
+}
+.chasm-two {
+    stroke-width:3.4px;
+}  
 
 
 /*
@@ -1019,6 +1064,18 @@ footer.contact {
 }
 
 @media screen and (max-width: 767px) {
+    .hero .desktop-video {
+        display: none;
+    }
+    .hero .mobile-video {
+        display: block;
+    }
+    .hero svg.logo {
+        width: 90vw;
+    }
+    .hero .tagline svg {
+        height: 4vw;
+    }
     section.about {
         /* max-width: 90vw;
         margin: 0 auto 0 auto; */
