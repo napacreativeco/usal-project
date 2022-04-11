@@ -244,12 +244,8 @@ section.loading .are-here {
 .hero svg.logo {
     width: 70vw;
 }
-.hero .desktop-video {
 
-}
-.hero .mobile-video {
-    display: none;
-}
+
 .hero video,
 .hero .mobile-video {
     position: absolute;
@@ -263,8 +259,12 @@ section.loading .are-here {
        object-fit: cover;
     z-index: -1;
 }
-.hero .mobile-video img {
+.mobile-video {
+    display: none;
+}
+.mobile-video img {
     object-fit: cover;
+    width: 100%;
 }
 .logo {
     width: 100%;
@@ -1068,10 +1068,10 @@ footer.contact {
 }
 
 @media screen and (max-width: 767px) {
-    .hero .desktop-video {
+    .desktop-video {
         display: none;
     }
-    .hero .mobile-video {
+    .mobile-video {
         display: block;
     }
     .hero svg.logo {
